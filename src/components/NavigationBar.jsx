@@ -6,7 +6,7 @@ function NavigationBar() {
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
-          FakeStore
+          🛍️FakeStore
         </Navbar.Brand>
 
         <Navbar.Toggle />
