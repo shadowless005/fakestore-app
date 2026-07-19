@@ -3,15 +3,15 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 function NavigationBar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/" className="fw-bold">
           FakeStore
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle />
 
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse>
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">
               Home

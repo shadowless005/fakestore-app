@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <Container className="text-center mt-5">
-      <h1>Welcome to FakeStore</h1>
+    <div className="hero">
+      <Container className="text-center">
+        <h1 className="display-3 fw-bold">Welcome to FakeStore 🛍️</h1>
 
-      <p className="mt-3">
-        Browse products, view details, and practice working with a real API.
-      </p>
+        <p className="lead mt-4">
+          Discover amazing products at great prices. Browse our collection and
+          explore our store.
+        </p>
 
-      <Button as={Link} to="/products" variant="primary">
-        View Products
-      </Button>
-    </Container>
+        <Button as={Link} to="/products" size="lg" className="mt-3">
+          Shop Now
+        </Button>
+      </Container>
+    </div>
   );
 }
 

@@ -33,10 +33,13 @@ function Products() {
       </Container>
     );
   }
-
   return (
     <Container className="mt-4">
-      <h2 className="mb-4 text-center">Products</h2>
+      <h2 className="mb-2 text-center">Our Products</h2>
+
+      <p className="text-center text-muted mb-4">
+        {products.length} products available
+      </p>
 
       <Row>
         {products.map((product) => (

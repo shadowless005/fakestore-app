@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

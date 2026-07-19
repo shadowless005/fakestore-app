@@ -16,14 +16,16 @@ function ProductCard({ product }) {
       />
 
       <Card.Body className="d-flex flex-column">
-        <Card.Title style={{ fontSize: "1rem" }}>{product.title}</Card.Title>
+        <Card.Title className="fw-bold" style={{ fontSize: "1rem" }}>
+          {product.title}
+        </Card.Title>
 
         <h5 className="text-success">${product.price}</h5>
 
         <Button
           as={Link}
           to={`/products/${product.id}`}
-          variant="primary"
+          variant="dark"
           className="mt-auto"
         >
           View Details
