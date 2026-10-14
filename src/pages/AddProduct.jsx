@@ -23,7 +23,10 @@ function AddProduct() {
     e.preventDefault();
 
     try {
-      await api.post("/products", formData);
+      await api.post("/products", {
+        ...formData,
+        price: Number(formData.price),
+      });
 
       setMessage("Product created successfully!");
 
@@ -65,6 +68,8 @@ function AddProduct() {
             name="price"
             value={formData.price}
             onChange={handleChange}
+            min="0"
+            step="0.01"
             required
           />
         </Form.Group>

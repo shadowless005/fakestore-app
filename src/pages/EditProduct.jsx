@@ -49,7 +49,10 @@ function EditProduct() {
     e.preventDefault();
 
     try {
-      await api.put(`/products/${id}`, formData);
+      await api.put(`/products/${id}`, {
+        ...formData,
+        price: Number(formData.price),
+      });
       setMessage("Product updated successfully!");
     } catch {
       setMessage("Update failed.");
@@ -84,6 +87,9 @@ function EditProduct() {
             name="price"
             value={formData.price}
             onChange={handleChange}
+            min="0"
+            step="0.01"
+            required
           />
         </Form.Group>
 
